@@ -12,11 +12,11 @@
             </a>
         </div>
         <p class="mx-auto text-sm opacity-70">or</p>
-        <p class="">Hugh_jass@gmail.com</p> -->
+        <p class="">amaylunagaria2@gmail.com</p> -->
 		<p><b class="pr-2">Email</b> amaylunagaria2@gmail.com</p>
 		<p>
 			<b class="pr-2">GitHub</b>
-			<a href=" " target="_blank" class="text-violet-400">
+			<a href="https://github.com/amaylunagaria" target="_blank" class="text-violet-400">
 				amaylunagaria
 				<sup class="">
 					<span class="text-xs scale-75 pl-0.5">
@@ -27,7 +27,7 @@
 		</p>
 		<p>
 			<b class="pr-2">LinkedIn</b>
-			<a href=" " target="_blank" class="text-violet-400">
+			<a href="https://www.linkedin.com/in/amay-lunagaria-01293a25b/" target="_blank" class="text-violet-400">
 				amaylunagaria
 				<sup class="">
 					<span class="text-xs scale-75 pl-0.5">

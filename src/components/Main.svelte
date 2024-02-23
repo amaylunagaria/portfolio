@@ -1,10 +1,19 @@
 <script>
 	import Step from '../components/Step.svelte';
+	import { onMount } from 'svelte';
+
+	var imageURL;
+	onMount(() => {
+		imageURL = import.meta.env.VITE_DAILY_DEV_CARD_URL;
+	});
 
 	let steps = [
-		{ name: 'Project 1', description: 'This is a project 1 description', icon: 'fa-solid fa-cart-shopping' },
-		{ name: 'Project 2', description: 'This is a project 2 description', icon: 'fa-solid fa-diagram-project' },
-		{ name: 'Project 3', description: 'This is a project 3 description', icon: 'fa-solid fa-list-check' }
+		{
+			name: 'Product Shoppe',
+			icon: 'fa-solid fa-cart-shopping'
+		},
+		// { name: 'Project 2', description: 'This is a project 2 description', icon: 'fa-solid fa-diagram-project' },
+		{ name: 'Minimal Todolist', icon: 'fa-solid fa-list-check', href: 'https://different-ruby-cuff.cyclic.app/' }
 	];
 
 	let benefits = [
@@ -47,7 +56,10 @@
 			</a>
 		</div>
 		<div class="relative shadow-2xl grid place-items-center">
-			<img src={'images/profile.png'} alt="Profile image" class="object-cover z-[2] max-h-[70vh]" />
+			<!-- <img src={' '} alt="Profile image" class="object-cover z-[2] max-h-[70vh]" /> -->
+			<a href="https://app.daily.dev/amaylunagaria">
+				<img src={imageURL} width="652" alt="Amay Lunagaria's Dev Card" />
+			</a>
 		</div>
 	</section>
 	<section id="projects" class="py-20 lg:py-32 flex flex-col gap-24">
@@ -63,22 +75,18 @@
 			<i class="fa-regular fa-circle-play" />
 			<p>Watch the video</p>
 		</a>
-		<div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-10">
+		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-10">
 			<Step step={steps[0]}>
-				<p>{steps[0].description}</p>
-				<!-- <p>
-                    Smoljames Store is a a merchanising store created with <strong
-                        class="text-violet-400"
-                        >Next.js, Commerce.js, Stripe & Node.js + Express.js!</strong
-                    > Commerce.js is a product CMS and Stripe is used for all transaction
-                    handling.
-                </p> -->
+				<p>
+					Product Shoppe is a mockup store created with <strong class="text-violet-400">Angular, Angular Material, TailwindCSS </strong> and
+					<strong class="text-violet-400">Firebase RTDB! </strong>
+				</p>
 			</Step>
 			<Step step={steps[1]}>
-				<p>{steps[1].description}</p>
-			</Step>
-			<Step step={steps[2]}>
-				<p>{steps[2].description}</p>
+				<p>
+					A simple looking todo list made in <strong class="poppins text-violet-400">Node.js + Express.js, EJS </strong> and with
+					<strong class="poppins text-violet-400"> MongoDB/MongoAtlas</strong> as the backend.
+				</p>
 			</Step>
 		</div>
 	</section>
@@ -94,21 +102,6 @@
 		<p class="mx-auto poppins font-semibold text-lg sm:text-xl md:text-2xl">I am . . .</p>
 		<div class="flex flex-col gap-20 w-full mx-auto max-w-[800px]">
 			{#each benefits as benefit, index}
-				<!-- <div class="flex flex-col gap-2 mx-auto">
-                    <div class="flex items-end gap-4">
-                        <p
-                            class="poppins text-6xl sm:text-7xl md:text-8xl text-slate-500 font-medium"
-                        >
-                            {benefit.metric}
-                        </p>
-                        <p
-                            class="text-xl sm:text-2xl md:text-3xl capitalize pb-2"
-                        >
-                            {benefit.name}
-                        </p>
-                    </div>
-                    <p class="text-center italic">- {benefit.description}</p>
-                </div> -->
 				<div class="flex gap-6 sm:gap-8">
 					<p class="poppins text-4xl sm:text-5xl md:text-6xl text-slate-500 font-semibold">
 						0{index + 1}
